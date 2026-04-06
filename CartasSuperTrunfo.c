@@ -116,21 +116,20 @@ int main() {
 
 // ---------------------------------------------------Área para comparação das cartas-------------------------------------------------------------------------------------------
 
-    printf("\nComparação de Cartas:\n");
+    printf("\nComparação de cartas (Atributo: População)\n\n");
 
-    printf("População: Carta %d venceu (%d)\n", (populacao1 > populacao2) ? 1 : 2, (populacao1 > populacao2) ? 1 : 0);
+    printf("Carta 1 - %s (%c): %lu habitantes\n", cidade1, estado1, populacao1);
+    printf("Carta 2 - %s (%c): %lu habitantes\n\n", cidade2, estado2, populacao2);
 
-    printf("Área: Carta %d venceu (%d)\n", (area_km1 > area_km2) ? 1 : 2, (area_km1 > area_km2) ? 1 : 0);
-
-    printf("PIB: Carta %d venceu (%d)\n", (pib1 > pib2) ? 1 : 2, (pib1 > pib2) ? 1 : 0);
-
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", (pontos_turisticos1 > pontos_turisticos2) ? 1 : 2, (pontos_turisticos1 > pontos_turisticos2) ? 1 : 0);
-
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", (densidadep1 < densidadep2) ? 1 : 2, (densidadep1 < densidadep2) ? 1 : 0);
-
-    printf("PIB per Capita: Carta %d venceu (%d)\n", (pibpercapita1 > pibpercapita2) ? 1 : 2, (pibpercapita1 > pibpercapita2) ? 1 : 0);
-
-    printf("Super Poder: Carta %d venceu (%d)\n", (superpoder1 > superpoder2) ? 1 : 2, (superpoder1 > superpoder2) ? 1 : 0);
-
+// Lógica de comparação
+if (populacao1 > populacao2) {
+    printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+}
+else if (populacao2 > populacao1) {
+    printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+}
+else {
+    printf("Resultado: Empate!\n");
+}
     return 0;
 } 
