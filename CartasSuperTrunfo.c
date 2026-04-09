@@ -211,11 +211,12 @@ case 5:
     else{
         printf("Empate!\n");
     }
-break;
+    break;
 
 default:
     printf("Opção inválida!\n");
+    break;
+}
 
 return 0;
-
 }
